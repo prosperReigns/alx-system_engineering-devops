@@ -46,3 +46,10 @@ executable script which creates a global variable called BESt with a value Schoo
 
 TRUEKOWLEDGE is a global variable with the value of 1209. This script clntains a command to print the addition of TRUEKNOWLEDGE and 128 on the terminal
 
+# 9-divide_and_rule
+
+Two global variables are used in this script
+export POWER=42784
+export DIVIDE=32
+
+this script print out the division of thr two variables 
