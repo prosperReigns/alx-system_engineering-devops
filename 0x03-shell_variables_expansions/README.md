@@ -29,3 +29,7 @@ This script outputs the total number of directories in PATH environment variable
 # 4-global_variables
 
 this shell command can be used to diaplay environmental variables. It comes with a shell utility package
+
+# 5-local_variables
+
+an executable command that displays a list of variables (environmental varibles) and function
