@@ -62,3 +62,9 @@ export LOVE=3
 
 This script displays the result of BREATH to the power of LOVE
 
+# 11-binary_to_decimal
+
+This script containes a global variable
+export BINARY=10100111001
+
+this script displays the result of the conversion on BINARy from base2 to base10
