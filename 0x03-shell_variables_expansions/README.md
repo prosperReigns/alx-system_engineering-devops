@@ -33,3 +33,8 @@ this shell command can be used to diaplay environmental variables. It comes with
 # 5-local_variables
 
 an executable command that displays a list of variables (environmental varibles) and function
+
+# 6-create_local_variable
+
+this script creates a local variable called BEST whith a value of School
+
