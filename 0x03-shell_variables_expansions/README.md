@@ -38,3 +38,7 @@ an executable command that displays a list of variables (environmental varibles)
 
 this script creates a local variable called BEST whith a value of School
 
+# 7-create_global_variable
+
+executable script which creates a global variable called BESt with a value School
+
