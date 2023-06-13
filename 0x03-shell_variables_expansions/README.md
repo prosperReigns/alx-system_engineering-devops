@@ -16,4 +16,8 @@ printf "%s\n" "hello user"
 
 The command printf is a command used to display string in the terminal window
 
-% is a format specifier where is stands for string. 
+% is a format specifier where is stands for string.
+
+# 2-path
+
+2-path is an executable script that creates an action directory in PATH emvironment variable
