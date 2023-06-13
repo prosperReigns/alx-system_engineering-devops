@@ -52,4 +52,13 @@ Two global variables are used in this script
 export POWER=42784
 export DIVIDE=32
 
-this script print out the division of thr two variables 
+this script print out the division of thr two variables
+
+# 10-love_exponent_breath
+
+this script contains two variables where both are global scoped
+export BREATH=4
+export LOVE=3
+
+This script displays the result of BREATH to the power of LOVE
+
