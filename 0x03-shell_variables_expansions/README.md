@@ -21,3 +21,7 @@ The command printf is a command used to display string in the terminal window
 # 2-path
 
 2-path is an executable script that creates an action directory in PATH emvironment variable
+
+# 3-path
+
+This script outputs the total number of directories in PATH environment variable
