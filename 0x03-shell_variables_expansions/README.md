@@ -42,3 +42,7 @@ this script creates a local variable called BEST whith a value of School
 
 executable script which creates a global variable called BESt with a value School
 
+# 8-true_knowledge
+
+TRUEKOWLEDGE is a global variable with the value of 1209. This script clntains a command to print the addition of TRUEKNOWLEDGE and 128 on the terminal
+
