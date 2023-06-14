@@ -32,4 +32,5 @@ ls_cwd_content contains a command that list all files and directories (hidden an
 ## 9-duplicate_last_line
 A script that duplicates the last line of the word "iacta"
 
-##
+## 10-no_more_js
+An executable script which deletea all files with the .js extension leaving behind the directories
