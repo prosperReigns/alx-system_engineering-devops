@@ -100,3 +100,6 @@ export DECIMAL=15
 
 This script encodes and decodes a text
 
+# 102-odd
+
+this script print every line from the input
