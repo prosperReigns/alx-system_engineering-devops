@@ -55,4 +55,7 @@ this script is executable
 using this ecexutable script you will be able to orgainse your files, sorting out those that appear only once from the rest
 it is a good tool if you are looking to filter an array of files
 
-##
+## 14-findthatword
+
+this program displays all the files with the line containing the pattern "root"
+used in occations where you want to know the files that belongs to the root diretory
