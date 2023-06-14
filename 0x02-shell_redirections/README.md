@@ -21,4 +21,7 @@ A script that displays the first 10 line of /etc/passwd file
 ## 6-third_line
 A script that displays the third letter of the word iacta
 
+## 7-file
+This script cretes a file \*\\'"Best School"\'\\*$\?\*\*\*\*\*:) with a Best School inside it
+
 ##
