@@ -47,3 +47,12 @@ the directories taken into account is directories in the current working directo
 inside the current working directory using the ls command for listing, an extra functionally was added that it lists the files recently created sorted by date in hierachical order of newest to oldest.
 
 ls command is further modified that it only displays a maximum of ten directories from the newest down to the oldest
+
+## 13-unique
+
+A script that take a list of words and print only those who appear only once
+this script is executable
+using this ecexutable script you will be able to orgainse your files, sorting out those that appear only once from the rest
+it is a good tool if you are looking to filter an array of files
+
+##
