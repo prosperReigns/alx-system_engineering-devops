@@ -24,4 +24,9 @@ A script that displays the third letter of the word iacta
 ## 7-file
 This script cretes a file \*\\'"Best School"\'\\*$\?\*\*\*\*\*:) with a Best School inside it
 
+## 8-cwd_state
+This script creates a file called ls_cwd_content if doesnt exit, and if it does it overrides the existing one.
+
+ls_cwd_content contains a command that list all files and directories (hidden and non-hidden) in the currrent working directory in a long format
+
 ##
