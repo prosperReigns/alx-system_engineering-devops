@@ -95,3 +95,8 @@ given the DECIMAL variable :
 export DECIMAL=16
 export DECIMAL=1337
 export DECIMAL=15
+
+# 101-rot13
+
+This script encodes and decodes a text
+
