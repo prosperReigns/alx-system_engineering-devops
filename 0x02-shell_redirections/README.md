@@ -34,3 +34,10 @@ A script that duplicates the last line of the word "iacta"
 
 ## 10-no_more_js
 An executable script which deletea all files with the .js extension leaving behind the directories
+
+## 11-directories
+Total number of directories and subdirectories in the current working directory.
+
+the munber of directories and subdirectories of the current working directory are taken into account leaving out the current working directory and its parent directory/directories.
+
+the directories taken into account is directories in the current working directory including hidden drectories
