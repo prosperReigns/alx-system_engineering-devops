@@ -16,4 +16,9 @@ A script that displays the content of /etc/passwd and etc/hosts
 A script that displays the last 10 line of /etc/passwd file
 
 ## 5-firstlines
-A script that displays the first 10 line of /etc/passwd file~
+A script that displays the first 10 line of /etc/passwd file
+
+## 6-third_line
+A script that displays the third letter of the word iacta
+
+##
