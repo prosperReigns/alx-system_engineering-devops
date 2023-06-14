@@ -41,3 +41,9 @@ Total number of directories and subdirectories in the current working directory.
 the munber of directories and subdirectories of the current working directory are taken into account leaving out the current working directory and its parent directory/directories.
 
 the directories taken into account is directories in the current working directory including hidden drectories
+
+## 12-newest_files
+
+inside the current working directory using the ls command for listing, an extra functionally was added that it lists the files recently created sorted by date in hierachical order of newest to oldest.
+
+ls command is further modified that it only displays a maximum of ten directories from the newest down to the oldest
