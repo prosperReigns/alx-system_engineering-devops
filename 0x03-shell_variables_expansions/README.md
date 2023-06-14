@@ -77,3 +77,13 @@ ONE COMBINATION PER LINE
 THE OUTPUT IS ALPHA ORDERED, STARTING WITH AA
 It does not print oo
 Contain maximum 64 characters
+
+# 13-print_float
+
+this script prints to two decimal places a number
+the number is stoerd in the variable NUM
+where initaially NUM is
+
+export NUM=0
+export NUM=98
+export NUM=3.14159265359
