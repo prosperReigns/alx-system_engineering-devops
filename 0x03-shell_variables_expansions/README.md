@@ -68,3 +68,12 @@ This script containes a global variable
 export BINARY=10100111001
 
 this script displays the result of the conversion on BINARy from base2 to base10
+
+# 12-combinations
+
+this script PRINTS ALL POSSIBLE COMBINATIONS OF TWO LETTERS, EXCEPT OO
+LETTERS ARE LOWER CASES, FROM A TO Z
+ONE COMBINATION PER LINE
+THE OUTPUT IS ALPHA ORDERED, STARTING WITH AA
+It does not print oo
+Contain maximum 64 characters
