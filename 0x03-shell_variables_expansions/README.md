@@ -87,3 +87,11 @@ where initaially NUM is
 export NUM=0
 export NUM=98
 export NUM=3.14159265359
+
+# 100-decimal_to_hexadecimal
+
+This script converts a number of base10 to hexadecimal
+given the DECIMAL variable :
+export DECIMAL=16
+export DECIMAL=1337
+export DECIMAL=15
