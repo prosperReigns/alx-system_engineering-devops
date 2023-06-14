@@ -103,3 +103,11 @@ This script encodes and decodes a text
 # 102-odd
 
 this script print every line from the input
+
+#103-water_and_stir
+
+This script makes use of two variables
+export WATER="ewwatratewa"
+export STIR="ti.itirtrtr"
+
+103-water_and_stir has a functionality of printing the sum of the values in the two variables thereby producting an output "bestchol"
