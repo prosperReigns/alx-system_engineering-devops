@@ -29,4 +29,7 @@ This script creates a file called ls_cwd_content if doesnt exit, and if it does 
 
 ls_cwd_content contains a command that list all files and directories (hidden and non-hidden) in the currrent working directory in a long format
 
+## 9-duplicate_last_line
+A script that duplicates the last line of the word "iacta"
+
 ##
