@@ -59,3 +59,7 @@ it is a good tool if you are looking to filter an array of files
 
 this program displays all the files with the line containing the pattern "root"
 used in occations where you want to know the files that belongs to the root diretory
+
+## 15-countthatword
+this program displays all the files with the line containing the pattern "bin"
+used in occations where you want to know th number of files associated with bin in /ect/passwd
