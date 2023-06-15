@@ -79,4 +79,6 @@ this program displays all lines of the file /etc/ssh/sshd_config thats starts wi
 ## 19-AZ
 this program replaces letter A and C respectively with Z and E of an input
 
-##
+## 20-hiago
+
+this program removes the word C uppercase and lowercase from an input
