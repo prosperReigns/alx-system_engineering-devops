@@ -82,3 +82,7 @@ this program replaces letter A and C respectively with Z and E of an input
 ## 20-hiago
 
 this program removes the word C uppercase and lowercase from an input
+
+## 21-reverse
+
+A program that takes in a strind as an input and return the reverse of the string
