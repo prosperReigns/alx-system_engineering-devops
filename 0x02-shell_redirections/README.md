@@ -66,4 +66,8 @@ used in occations where you want to know th number of files associated with bin 
 
 ## 16-whatsnext
 
-A program that displays file with root lines and the next three lines after the root
+A program that displays file with root lines and the next three lines after the root in /etc/passwd
+
+## 17-hidethisword
+
+This program scans through all the files in /etc/passwd directory and filter all files without the word "bin" and prints its out
