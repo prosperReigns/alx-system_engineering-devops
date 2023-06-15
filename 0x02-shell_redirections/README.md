@@ -71,3 +71,9 @@ A program that displays file with root lines and the next three lines after the 
 ## 17-hidethisword
 
 This program scans through all the files in /etc/passwd directory and filter all files without the word "bin" and prints its out
+
+## 18-letteronly
+
+this program displays all lines of the file /etc/ssh/sshd_config thats starts with a letter
+
+##
