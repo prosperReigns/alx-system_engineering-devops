@@ -76,4 +76,7 @@ This program scans through all the files in /etc/passwd directory and filter all
 
 this program displays all lines of the file /etc/ssh/sshd_config thats starts with a letter
 
+## 19-AZ
+this program replaces letter A and C respectively with Z and E of an input
+
 ##
