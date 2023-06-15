@@ -86,3 +86,7 @@ this program removes the word C uppercase and lowercase from an input
 ## 21-reverse
 
 A program that takes in a strind as an input and return the reverse of the string
+
+## 22-users_and_homes
+
+A program that displays directories of sort user
