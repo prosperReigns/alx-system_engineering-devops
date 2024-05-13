@@ -3,20 +3,23 @@
 
 # Update package lists
 sudo apt update
-
+# enable dedicated ppa
+sudo apt-get install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.8
 # Install HAProxy
-sudo apt install -y haproxy
+sudo apt-get install haproxy=2.8.\*
 
 # Configure HAProxy
 cat <<EOF | sudo tee /etc/haproxy/haproxy.cfg
 frontend http-in
     bind *:80
-    default_backend servers
+    mode http
+    default_backend web_servers
 
-backend servers
+backend webservers
     balance roundrobin
-    server web-01 [STUDENT_ID]-web-01:80 check
-    server web-02 [STUDENT_ID]-web-02:80 check
+    server web-01 442780-web-01 52.3.247.130:80 check
+    server web-02 442780-web-02 54.234.30.56:80 check
 EOF
 
 # Manage HAProxy via init script
