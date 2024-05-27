@@ -1,0 +1,15 @@
+echo -e "update and install ufw\n"
+sudo apt update
+sudo apt install ufw
+
+echo -e "set default\n"
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+echo -e "set rules\n"
+sudo ufw allow ssh
+sudo ufw allow https
+sudo ufw allow http
+
+echo -e "enable firewall\n"
+sudo ufw enable
