@@ -1,0 +1,9 @@
+web-01
+CREATE USER slave@'%' IDENTIFIED BY 'password';
+GRANT REPLICATION SLAVE ON *.* TO slave@'%';
+FLUSH PRIVILEGES;
+SHOW MASTER STATUS
+
+web-02
+CHANGE MASTER TO MASTER_HOST='master ip', MASTER_USER=repl', MASTER_PASSWORD='slave pasword', MASTER_LOG_FILE='log file name', MASTER_LOG_POS=log position number;
+sudo service mysql restart
