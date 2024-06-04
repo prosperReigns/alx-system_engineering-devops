@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""  script to export data in the JSON format. """
 
 import json
 import requests
@@ -26,5 +27,4 @@ data_to_export = {
         ]
     }
 with open("{}.json".format(user_id), "w") as jsonfile:
-        json.dump(data_to_export, jsonfile, indent=4)
-
+    json.dump(data_to_export, jsonfile, indent=4)

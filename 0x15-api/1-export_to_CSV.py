@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" a script to export data in the CSV format. """
 
 import requests
 import sys
@@ -15,10 +16,10 @@ params = {"userId": employee_id}
 todos = requests.get(api_url + "todos", params).json()
 
 completed = [title.get("title") for title in todos if
-                 title.get('completed') is True]
+    title.get('completed') is True]
 
 with open("{}.csv".format(employee_id), "w", newline="") as csvfile:
-        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        [writer.writerow(
-            [user_id, username, todo.get("completed"), todo.get("title")]
-         ) for todo in todos]
+    writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+    [writer.writerow(
+        [user_id, username, todo.get("completed"), todo.get("title")]
+    ) for todo in todos]
