@@ -1,22 +1,33 @@
 #!/usr/bin/python3
-"""  script to export data in the JSON format. """
+"""
+Exports to-do list information for a given employee ID to JSON format.
+
+This script takes an employee ID as a command-line argument and exports
+the corresponding user information and to-do list to a JSON file.
+"""
 
 import json
 import requests
 import sys
 
 
-user_id = sys.argv[1]
-url = "https://jsonplaceholder.typicode.com/"
+if __name__ == "__main__":
+    # Get the employee ID from the command-line argument
+    user_id = sys.argv[1]
 
-user = requests.get(url + "users/{}".format(user_id)).json()
-username = user.get("username")
+    # Base URL for the JSONPlaceholder API
+    url = "https://jsonplaceholder.typicode.com/"
 
-params = {"userId": user_id}
-todos = requests.get(url + "todos", params).json()
+    # Fetch user information using the provided employee ID
+    user = requests.get(url + "users/{}".format(user_id)).json()
+    username = user.get("username")
 
+    # Fetch the to-do list for the employee using the provided employee ID
+    params = {"userId": user_id}
+    todos = requests.get(url + "todos", params).json()
 
-data_to_export = {
+    # Create a dictionary containing the user and to-do list information
+    data_to_export = {
         user_id: [
             {
                 "task": t.get("title"),
@@ -26,5 +37,8 @@ data_to_export = {
             for t in todos
         ]
     }
-with open("{}.json".format(user_id), "w") as jsonfile:
-    json.dump(data_to_export, jsonfile, indent=4)
+
+    # Write the data to a JSON file with the employee ID as the filename
+    with open("{}.json".format(user_id), "w") as jsonfile:
+        json.dump(data_to_export, jsonfile, indent=4)
+
