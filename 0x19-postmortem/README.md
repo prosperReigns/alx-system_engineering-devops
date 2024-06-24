@@ -58,3 +58,72 @@ The issue was resolved by renewing the SSL certificate and updating the Nginx co
    - Ensure that any changes to SSL configurations are tested in staging before production.
 
 By addressing these measures, we aim to prevent similar incidents in the future and ensure higher reliability and availability of our web services.
+
+# 🚨 Postmortem: The Great SSL Certificate Expiry of July 14, 2023 🚨
+
+![SSL Certificate](https://www.certlibrary.com/Content/Assets/CertificateTypes/ssl.png)
+
+## Issue Summary
+
+**Duration:** July 14, 2023, 10:00 AM - 12:30 PM GMT
+
+**Impact:** Our web application decided to take a nap for 2 hours and 30 minutes, leaving all our 10,000 users in the dark. Instead of seeing our lovely homepage, users were greeted with errors, leading to a 100% outage. 
+
+**Root Cause:** Spoiler alert! It was an expired SSL certificate. Who knew certificates had expiration dates? Oh right, we did. 
+
+## Timeline
+
+- **10:00 AM GMT** - 🚨 **Issue detected** via New Relic: sharp drop in web traffic and a rise in server errors. Panic ensued.
+- **10:05 AM GMT** - On-call engineer confirmed: "Yup, it's broken."
+- **10:10 AM GMT** - Verified: Web servers are alive, but load balancer is playing dead.
+- **10:15 AM GMT** - Assumed the recent deployment was the culprit. **Rollback initiated**.
+- **10:30 AM GMT** - Rollback completed. Issue still there. Deployment wasn't the villain.
+- **10:45 AM GMT** - **Escalated** to senior DevOps team: "Houston, we have a problem."
+- **11:00 AM GMT** - Identified that the Nginx load balancer was being a drama queen.
+- **11:15 AM GMT** - Investigated Nginx configuration. **Found the expired SSL certificate**. Facepalms all around.
+- **11:30 AM GMT** - Began **renewing the SSL certificate**.
+- **12:00 PM GMT** - SSL certificate renewed. Nginx configuration updated.
+- **12:15 PM GMT** - Nginx restarted. Traffic flowing like the Nile again.
+- **12:30 PM GMT** - Full service restored. All systems operational. Celebratory high-fives exchanged.
+
+## Root Cause and Resolution
+
+**Root Cause:**
+The Nginx load balancer was routing traffic like a pro until its SSL certificate expired. With the certificate gone, Nginx refused to play ball, causing a complete outage.
+
+**Resolution:**
+1. **Identified the expired SSL certificate** in the Nginx logs.
+2. **Generated a new SSL certificate** using Certbot. 💡 Pro Tip: Certbot is a lifesaver.
+3. **Updated Nginx configuration** to use the shiny new certificate.
+4. **Restarted Nginx** and verified that traffic was routing properly. 
+
+## Corrective and Preventative Measures
+
+**Improvements/Fixes:**
+1. **Automate SSL Renewal:**
+   - Use Certbot's auto-renew feature to avoid future expiry surprises.
+2. **Enhanced Monitoring:**
+   - Set up alerts for SSL certificate expiration dates. No more last-minute panic!
+3. **Documentation:**
+   - Update our SOPs with clear steps for SSL certificate renewal.
+4. **Testing:**
+   - Include SSL certificate checks in our deployment pipeline.
+
+**TODO Tasks:**
+1. **Patch Nginx Server:**
+   - Configure Certbot for automated SSL renewal.
+   - Test and verify automated renewal.
+2. **Add Monitoring:**
+   - Implement SSL expiration alerts in New Relic.
+   - Set alerts for 30 days before expiry.
+3. **Update Documentation:**
+   - Document SSL renewal procedures and troubleshooting steps.
+4. **Enhance Deployment Pipeline:**
+   - Add SSL checks to CI/CD pipeline.
+   - Test SSL changes in staging before deploying to production.
+
+## Diagram of Events
+
+![Timeline Diagram](https://user-images.githubusercontent.com/68430010/130209241-43709fba-88c3-4d6e-9304-2757ae519015.png)
+
+**Remember:** An expired SSL certificate is like milk left out too long—no one wants to deal with the aftermath. Automate, monitor, document, and test to keep your services running smoothly. Until next time, keep those certificates fresh! 🥛🔒
